@@ -1,0 +1,348 @@
+<!-----PLEASE PLEASE PLEASE.----->
+<!-------READ THESE LINES-------->
+
+<!-----I am very new to coding so this code may appear boring ---->
+<!------This is very simple --->
+<!-----No. of days i commited to this code = 3----->
+<!----My only aim to create this is self improvement---->
+<!----So please help me in my journey of self improvement by writing your opinions in comments---->
+<!----I am not afraid to face rude comments but yeah i want you all to be truthful please--->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\Anshika Thakur\Desktop\js\counters\updown.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.page{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;    
+    background: linear-gradient(130deg, #e8eefe 50%, #92b2f8 50%);
+}
+.page img{
+    height: 350px;
+    width: 350px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+.page .head{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.page .head p{
+    font-weight: 700;
+    color: #e85a54;
+    letter-spacing: 1.5px;
+    text-align:center;
+}
+.page .head h1{
+    color: #56508d;
+    font-weight: 900;
+    text-align:center;
+}
+.page .head button{
+    background-color: #e85a54;
+    color: #ececec;
+    border: 2px solid #ececec;
+    padding: 15px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    border-radius: 2px;
+    box-shadow: 2.5px 2.5px 10px 2.5px #2222;
+}
+.page .head button:hover{
+    color: #4c4ef8;
+    background-color: #ececec;
+    border: 2px solid #4c4ef8;
+
+}
+.page2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: circle(0% at 0 100%);
+    /* clip-path: circle(100% at 50% 50%); */
+    background-image: linear-gradient(128deg, rgba(10, 10, 10,0.06) 0%, rgba(10, 10, 10,0.06) 50%,rgba(193, 193, 193,0.06) 50%, rgba(193, 193, 193,0.06) 100%),linear-gradient(51deg, rgba(231, 231, 231,0.06) 0%, rgba(231, 231, 231,0.06) 50%,rgba(39, 39, 39,0.06) 50%, rgba(39, 39, 39,0.06) 100%),linear-gradient(90deg, hsl(216,75%,70%),hsl(216,75%,70%)); 
+    background-size: 56px 56px;
+    transition: all 1s ease-in-out;
+}
+.page2 .box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: #e85a54; */
+    background-image: linear-gradient(128deg, rgba(10, 10, 10,0.06) 0%, rgba(10, 10, 10,0.06) 50%,rgba(193, 193, 193,0.06) 50%, rgba(193, 193, 193,0.06) 100%),linear-gradient(51deg, rgba(231, 231, 231,0.06) 0%, rgba(231, 231, 231,0.06) 50%,rgba(39, 39, 39,0.06) 50%, rgba(39, 39, 39,0.06) 100%),linear-gradient(90deg, hsl(216,75%,70%),hsl(216,75%,70%)); 
+    background-size: 100px 100px;
+    height: 450px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    border: 7px solid #ecececb9;
+    box-shadow: 0 12px 12px 1px #0008;
+}
+.page2 .box h1{
+    color: #e85a54;
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+.page2 .box .numb{
+    color: #ececec;
+    font-size: 7rem;
+    margin-top: 20px;
+}
+.page2 .box .controls{
+    display: flex;
+    flex-direction: row;
+    margin-top: 35px;
+    width: 90%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.page2 .box .controls i{
+    font-size: 3rem;
+    color: #e85a54;
+    cursor: pointer;
+    border-radius: 100%;
+    background-color: #ececec;
+    transition: all .5s ease-in-out;
+}
+.page2 .box .controls i:hover{
+    background-color: #e85a54;
+    color: #ececec;
+}
+.main{
+    height:100%;
+    width:100vw;
+    position:fixed;
+    overflow:hidden;
+    top: 0;
+    left: 0;
+    background-color:rgb(1, 0, 15);
+    z-index: 50;
+}
+.lbox{
+    height:300px;
+    width:300px;
+    padding:30px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0.3);
+    transform-style:preserve-3d;
+    position:absolute;
+    z-index:100;
+}
+.lbox .box{
+    height:250px;
+    width:250px;
+    background-color:transparent;
+    padding:30px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    transform-style:preserve-3d;
+    position:absolute;
+}
+.lbox .box2{
+    transform:translate(-50%,-50%) rotate(30deg);
+}
+.lbox .box3{
+    transform:translate(-50%,-50%) rotate(-45deg);
+}
+.lbox .box4{
+    transform:translate(-50%,-50%) rotate(60deg);
+}
+.lbox .box5{
+    transform:translate(-50%,-50%) rotate(-75deg);
+}
+.lbox .box6{
+    transform:translate(-50%,-50%) rotate(105deg);
+}
+.lbox .box7{
+    transform:translate(-50%,-50%) rotate(-120deg);
+}
+.lbox .box8{
+    transform:translate(-50%,-50%) rotate(135deg);
+}
+.lbox .box9{
+    transform:translate(-50%,-50%) rotate(-150deg);
+}
+.lbox .box10{
+    transform:translate(-50%,-50%) rotate(165deg);
+}
+.lbox .b1{
+    height:100%;
+    width:100%;
+    border:2px solid transparent;
+    animation:r1 7s linear both infinite;
+    transform:perspective(1000px) translateZ(100%) rotate(-360deg);
+}
+@keyframes r1{
+    0%{
+        transform:perspective(1000px) rotateX(0deg) rotate(-360deg);
+    }
+    
+    100%{
+        transform:perspective(1000px) rotateX(360deg) rotate(360deg);
+    }
+}
+.lbox .b{
+    border-image:linear-gradient(45deg, #e85a54, #fa433d, #ff8985, #fd2921, #fcaeab);
+    border-image-slice:1;
+}
+@media (min-width:1200px){
+    .page{
+        background: linear-gradient(130deg, #e8eefe 65%, #92b2f8 65%);
+    }
+    .page1 img{
+        height: 450px;
+        width: 450px;
+        position: absolute;
+        bottom: 35px;
+        right: 30px;
+    }
+    .page1 .head{
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+    }
+    .page1 .head p{
+        letter-spacing: 2.5px;
+        font-size: 1.5rem;
+    }
+    .page1 .head h1{
+        font-size: 3.5rem;
+        letter-spacing: 2.5px;
+    }
+    .page1 .head button{
+        padding: 20px;
+        font-size: 1.5rem;
+        letter-spacing: 2.5px;
+        margin-top: 100px;
+        transition: all .5s ease-in-out;
+        border-radius: 5px;
+    }
+}
+</style>
+    <div class="page page1" id="p1">
+        <div class="head">
+            <p>Maggi Creation Presents</p>
+            <h1>Tally Counter</h1>
+            <button onclick="np()">Calculate Now</button>
+        </div>
+        <img src="https://www.dropbox.com/s/8jyvx9tnzsjp160/1625635674505.png?dl=1" alt="">
+    </div>
+    <div class="page page2" id="p2">
+        <div class="box">
+            <h1>Tally Piece</h1>
+            <p class="numb" id="numb">0</p>
+            <div class="controls">
+            <div class="plus" id="plus"><i class="fas fa-plus-circle"></i></div>
+            <div class="minus" id="minus"><i class="fas fa-minus-circle"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="main" id="loader">
+        <div class="lbox">
+            <div class="box">
+                <div class="b b1 b11"></div>
+            </div>
+            <div class="box box2">
+                <div class="b b1 b12"></div>
+            </div>
+            <div class="box box3">
+                <div class="b b1 b13"></div>
+            </div>
+            <div class="box box4">
+                <div class="b b1 b14"></div>
+            </div>
+            <div class="box box5">
+                <div class="b b1 b15"></div>
+            </div>
+            <div class="box box6">
+                <div class="b b1 b16"></div>
+            </div>
+            <div class="box box7">
+                <div class="b b1 b17"></div>
+            </div>
+            <div class="box box8">
+                <div class="b b1 b18"></div>
+            </div>
+            <div class="box box9">
+                <div class="b b1 b19"></div>
+            </div>
+            <div class="box box10">
+                <div class="b b1 b120"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var p1 = document.getElementById('p1');
+        var p2 = document.getElementById('p2');
+        var numb = document.getElementById('numb');
+        var plus = document.getElementById('plus');
+        var minus = document.getElementById('minus');
+        var loader = document.getElementById("loader");
+        window.onload = function(){
+            setTimeout(() => {
+                loader.style.display="none";
+            }, 3000);
+        }
+        let count = 0;
+        function np(){
+            p2.style.clipPath="circle(100% at 50% 50%)";
+        }
+        plus.addEventListener("click", ()=>{
+            count++;
+            if (count > 0){
+                numb.style.color = "#13097c";
+            }else if (count == 0){
+                numb.style.color = "#ececec";
+            }
+            numb.innerHTML = count;
+        });
+        minus.addEventListener("click", ()=>{
+            count--;
+            if (count < 0){
+                numb.style.color = "#da2b42";
+            }else if (count == 0){
+                numb.style.color = "#ececec";
+            }
+            numb.innerHTML = count;
+        });
+        
+    </script>
+</body>
+</html>
